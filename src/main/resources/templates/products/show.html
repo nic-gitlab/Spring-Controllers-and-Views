@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/css/main.css">
+  <meta charset="UTF-8">
+  <title>Product Show Page</title>
+</head>
+<body>
+<h2 th:text=${product.name}></h2>
+<p th:text="'Price: $' + ${product.price}"></p>
+<p th:text="${product.caffeineRatingString()} + ' (' + ${product.caffeineRating} + ')'" th:class=${product.setFontColor()} ></p>
+<p th:text=${product.description}></p>
+<a href="/products">Back to Product list</a>
+</body>
+</html>
